@@ -1,0 +1,14 @@
+
+  //assigning a function as a value becomes a method
+  switchNameHandler = (newName) => {
+    // console.log('was Clicked!');
+  //DON'T DO THIS this.state.persons[0].name = 'Maximilian';
+  //DO THIS, IT WILL LEAVE OTHER STATE UNTOUCHED 
+  //IF state or props change it will re render everything to the DOM
+  this.setState({persons: [
+    {name: newName, age: 28},
+    {name: 'Manu', age: 29},
+    {name: 'Stephanie', age: 27}
+  ] })
+
+  }
